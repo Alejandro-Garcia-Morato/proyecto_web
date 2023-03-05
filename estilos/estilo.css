@@ -1,0 +1,601 @@
+@font-face {
+    font-family: TiltWarp;
+    src: url(../recursos/fuentes/TiltWarp-Regular-VariableFont_XROT\,YROT.ttf);
+}
+
+:root {
+    --color-negro: #080808;
+    --color-naranja: #d2683d;
+    --color-gris-claro: #e4e4e4;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: TiltWarp, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.current {
+    text-decoration: underline;
+    color: var(--color-naranja);
+}
+
+.lista-horizontal {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.borderb-1 {
+    border-bottom: 1px solid var(--color-naranja);
+}
+
+.padding-40 {
+    padding: 40px 2.5rem;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    grid-area: header;
+    background-color: var(--color-naranja);
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-logo_titulo{
+    display: flex;
+}
+
+.header-div-logo {
+    height: fit-content;
+    width: fit-content;
+}
+
+.header-logo {
+    height: 124px;
+    width: 124px;
+}
+
+h1 {
+    padding: 18px 0px 18px 50px;
+    font-size: 68px;
+    color: var(--color-negro);
+}
+
+.header-buscar_redes {
+    padding: 0.6rem 1.3rem 0.6rem 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.header-redes ul {
+    justify-content: space-between;
+}
+
+.iconos-redes {
+    width: 30px;
+}
+
+.menu_principal {
+    grid-area: menu;
+    background-color: var(--color-negro);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.menu_principal ul li {
+    padding: 1.3rem 1.6rem;
+    text-align: center;
+}
+
+.menu_principal ul li:hover {
+    background-color: var(--color-gris-claro);
+}
+
+.menu_principal a {
+    text-decoration: none;
+    color: var(--color-naranja);
+}
+
+.contenido-principal {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-areas: "main aside";
+}
+
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.main-secciones {
+    display: flex;
+    flex-direction: row;
+}
+
+.main-section-div-img {
+    padding-top: 50px;
+}
+
+.main-seccion-img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+.main-section-texto {
+    padding: 35px;
+}
+
+aside {
+    grid-area: aside;
+    height: fit-content;
+    border: 1px solid var(--color-negro);
+    padding: 10px 10px 10px 20px;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 110px;
+}
+
+aside h3 {
+    color: var(--color-naranja);
+    padding-top: 15px;
+}
+
+.aside-encuentro1-padding {
+    padding-top: 25px;
+}
+
+.aside-encuentro-padding {
+    padding-top: 20px;
+}
+
+aside div:last-child {
+    padding-bottom: 15px;
+}
+
+aside a {
+    text-decoration: none;
+    color: var(--color-naranja);
+}
+
+aside a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    grid-area: footer;
+    background-color: var(--color-gris-claro);
+}
+
+.footer-mapa {
+    width: 100%;
+    height: 550px;
+}
+
+.footer-div-politicas {
+    padding-top: 20px;
+    font-size: 0.8rem;
+}
+
+.footer-div-politicas ul {
+    justify-content: space-around;
+}
+
+.footer-div-politicas a {
+    text-decoration: none;
+    color: var(--color-negro);
+}
+
+.footer-div-politicas a:hover {
+    text-decoration: underline;
+    color: var(--color-naranja);
+}
+
+.footer-div-copy {
+    padding: 20px 0px;
+    font-size: 0.8rem;
+}
+
+.est-main{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.est-main h2{
+    text-align: center;
+}
+
+.est-main-img{
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0px;
+}
+
+.est-main img{
+    width: 800px;
+}
+
+.est-main-table{
+    display: flex;
+    justify-content: center;
+}
+
+.est-main table,
+tr,
+th,
+td {
+    border: 1px solid var(--color-negro);
+    border-collapse: collapse;
+}
+
+.est-main thead th {
+    background-color: var(--color-negro);
+    color: var(--color-naranja);
+}
+
+.est-main tr td:first-child {
+    background-color: #79807d;
+}
+
+.est-main .table-lider {
+    background-color: var(--color-gris-claro);
+}
+
+.form-main{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-main-secciones{
+    padding-top: 40px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.form-content-input{
+    display: flex;
+    padding-top: 20px;
+}
+
+.form-div-submit{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.main-video{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-video div{
+    padding-bottom: 30px;
+}
+
+.div-video{
+    display: flex;
+    justify-content: center;
+}
+
+.main-video video{
+    width: 700px;
+}
+
+/* Para portátiles */
+@media screen and (min-width: 804px) and (max-width: 1024px) {
+
+    .header-logo {
+        height: 120px;
+        width: 120px;
+    }
+
+    h1 {
+        padding: 30px 0px 32px 15px;
+        font-size: 50px;
+    }
+
+    .header-buscar_redes {
+        padding: 0.8rem 1rem 0.8rem 0px;
+    }
+
+    .iconos-redes {
+        width: 28px;
+    }
+    
+    .est-main img{
+        width: 600px;
+    }
+
+    .main-video video{
+        width: 600px;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    aside {
+        padding-bottom: 15px;
+        top: 80px;
+    }
+    
+    aside h3 {
+        color: var(--color-naranja);
+        padding-top: 10px;
+    }
+    
+    .aside-encuentro1-padding {
+        padding-top: 20px;
+    }
+    
+    .aside-encuentro-padding {
+        padding-top: 15px;
+    }
+    
+    aside div:last-child {
+        padding-bottom: 10px;
+    }
+    
+}
+
+/* Para tablets */
+@media (min-width: 481px) and (max-width: 803px) {
+
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-logo_titulo{
+        justify-content: space-between;
+    }
+
+    .header-logo {
+        height: 100px;
+        width: 100px;
+    }
+
+    h1 {
+        padding: 28px 120px 28px 0px;
+        font-size: 44px;
+    }
+
+    .header-buscar_redes {
+        padding: 0.8rem 1rem 0.8rem 0px;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .iconos-redes {
+        width: 28px;
+        margin-left: 15px;
+    }
+    
+    .menu_principal ul li {
+        padding: 1rem;
+    }
+
+    .menu_principal a {
+        font-size: 0.9rem;
+    }
+
+    .contenido-principal {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .main-section-div-img {
+        padding-top: 10px;
+    }
+    
+    .main-seccion-img {
+        width: 180px;
+    }
+    
+    .main-section-texto {
+        padding: 25px;
+    }
+
+    .est-main img{
+        width: 500px;
+    }
+
+    .est-main-table{
+        overflow: auto;
+    }
+
+    .form-content{
+        flex-direction: column;
+    }
+
+    .form-content div div{
+        display: flex;
+        justify-content: center;
+    }
+
+    .form-datos-encuentro{
+        padding-top: 30px;
+    }
+
+    .main-video video{
+        width: 500px;
+    }
+
+    aside {
+        position: static;
+        margin: 0 60px;
+    }
+    
+    .aside-encuentro1-padding {
+        padding-left: 50px;
+    }
+
+    .aside-encuentro-padding {
+        padding-left: 50px;
+    }
+
+}
+
+/* Para móviles */
+@media (max-width: 480px) {
+
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-logo {
+        height: 80px;
+        width: 80px;
+    }
+
+    .header-logo_titulo{
+        justify-content: space-between;
+    }
+
+    h1 {
+        padding: 20px 16px 20px 0px;
+        font-size: 32px;
+    }
+
+    .header-buscar_redes {
+        padding: 0.6rem 1rem 0.6rem 1rem;
+        flex-direction: column;
+    }
+
+    .header-redes{
+        padding-top: 10px;
+    }
+
+    .iconos-redes {
+        width: 24px;
+        margin-left: 12px;
+    }
+
+    .menu_principal ul {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .menu_principal ul li {
+        padding: 0.6rem;
+    }
+
+    .menu_principal a {
+        font-size: 1rem;
+    }
+
+    .contenido-principal {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .main-secciones{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .main-section-div-img {
+        padding: 0px 30px;
+        height: fit-content;
+        width: fit-content;
+    }
+    
+    .main-seccion-img {
+        width: 200px;
+    }
+    
+    .main-section-texto {
+        padding: 20px;
+    }
+
+    .est-main img{
+        width: 300px;
+    }
+
+    .est-main-table{
+        overflow: auto;
+    }
+
+    .form-content{
+        flex-direction: column;
+    }
+
+    .form-datos-encuentro{
+        padding-top: 30px;
+    }
+
+    .main-video video{
+        width: 300px;
+    }
+
+    aside {
+        position: static;
+        margin: 0 60px;
+    }
+    
+    .aside-encuentro1-padding {
+        padding-left: 50px;
+    }
+
+    .aside-encuentro-padding {
+        padding-left: 50px;
+    }
+
+    .footer-div-politicas{
+        padding-top: 0px;
+    }
+
+    .footer-div-politicas ul{
+        flex-direction: column;
+    }
+
+    .footer-div-politicas ul li{
+        text-align: center;
+        padding-top: 20px;
+    }
+
+}
